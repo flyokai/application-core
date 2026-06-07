@@ -1,0 +1,30 @@
+{
+    "name": "flyokai/application-core",
+    "description": "Sync framework core for Flyokai: bootstrap, dependency injection, setup steps, console base, schema/DDL columns and repositories. No async runtime (AMPHP event loop / Revolt), so it can be hosted inside synchronous PHP frameworks (e.g. Shopware) via flyokai/marketplace-embedded.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "flyokai/amphp-injector": "^1",
+        "flyokai/composition": "self.version",
+        "flyokai/data-mate": "self.version",
+        "flyokai/generic": "self.version",
+        "flyokai/laminas-db-bulk-update": "self.version",
+        "flyokai/laminas-db": "^1",
+        "flyokai/symfony-console": "self.version",
+        "laminas/laminas-config": "^3.10"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Flyokai\\ApplicationCore\\": "",
+            "Flyokai\\SearchCriteria\\": "SearchCriteria/src/",
+            "Flyokai\\DbSchema\\": "DbSchema/src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-dev": "1.0.x-dev"
+        }
+    }
+}
